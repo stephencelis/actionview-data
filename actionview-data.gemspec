@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.files = %w(actionview-data.rb README.rdoc)
   s.test_file = "actionview-data_test.rb"
 
-  s.add_dependency "activesupport", '~> 3.0.0'
+  s.add_dependency "actionpack", '~> 3.0.0'
 
   s.extra_rdoc_files = %w(README.rdoc)
   s.rdoc_options = %w(--main README.rdoc)
