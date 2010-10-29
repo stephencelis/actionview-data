@@ -6,7 +6,13 @@ ActionView::Helpers::TagHelper.module_eval do
       attrs = []
       options.each_pair do |key, value|
         if key.to_s == 'data' && value.is_a?(Hash)
-          value.each { |k, v| attrs << %(data-#{k}="#{ERB::Util.h(v.is_a?(String) ? v : v.to_json)}") }
+          value.each_pair do |k, v|
+            if !v.is_a?(String) && !v.is_a?(Symbol)
+              v = v.to_json
+            end
+            v = html_escape(v) if escape
+            attrs << %(data-#{k.to_s.dasherize}="#{v}")
+          end
         elsif BOOLEAN_ATTRIBUTES.include?(key)
           attrs << %(#{key}="#{key}") if value
         elsif !value.nil?

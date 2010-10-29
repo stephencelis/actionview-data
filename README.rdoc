@@ -6,8 +6,8 @@ HTML5 data attribute helpers for ActionView.
   # <a data-array="[1,2,3]" data-hash="{&quot;k&quot;:&quot;v&quot;}" data-number="1" data-string="hi"/>
 
 
-This patch also
-{awaits your support on Lighthouse}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/5825-html5-data-attributes].
+This patch
+{is in Rails 3.1}[https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/5825-html5-data-attributes].
 
 
 == Install
